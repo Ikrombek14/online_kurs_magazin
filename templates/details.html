@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot Tafsilotlari</title>  <!-- title sozini tugri yozing -->
+</head>
+<body>
+    <h1>Mahsulot Tafsilotlari</h1>
+    <h3>
+       <b>Kategoriya:</b> {{ product.category.name }}<br>  <!-- Kategoriyani ko'rsatish -->
+       <b>Nomi:</b> {{ product.name }}<br>
+       <b>Tavsifi:</b> {{ product.body }}<br>
+       <b>Narxi:</b> {{ product.price }}<br>
+    </h3>
+    
+    <!-- Tahrirlash va o'chirish uchun havolalar -->
+    <a href="{% url 'update_product' product.pk %}">Tahrirlash</a>  <!-- Tahrirlash uchun URL -->
+    <a href="{% url 'delete_product' product.pk %}">O'chirish</a>  <!-- O'chirish uchun URL -->
+
+    <!-- Orqaga qaytish havolasi -->
+    <br>
+    <a href="{% url 'get_categories' %}">Kategoriya Ro'yxatiga Qaytish</a>  <!-- orqaga qaytish -->
+    
+</body>
+</html>

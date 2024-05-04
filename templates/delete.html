@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+</head>
+<body>
+    <h1>Delete Product</h1>
+    <p>Are you sure you want to delete the product: {{ product.name }}?</p>  <!-- tasdiqlash so'rovi -->
+    <form method="POST">  <!-- POST so'rov -->
+        {% csrf_token %}  <!-- CSRF himoyasi -->
+        <button type="submit">Yes, Delete</button>  <!-- tasdiqlash tugmasi -->
+    </form>
+    <a href="{% url 'get_categories' %}">No, Back to Products</a>  <!-- bekor qilish havolasi -->
+</body>
+</html>
